@@ -6,13 +6,50 @@ A small, growing collection of hunting and detection queries I use as starting p
 
 ## Contents
 
-| Area | Query set | Platform |
-|---|---|---|
-| ClickFix (fake CAPTCHA, Win+R paste) | [`crowdstrike-falcon/clickfix-hunting.md`](crowdstrike-falcon/clickfix-hunting.md) | CrowdStrike Falcon Advanced Event Search |
-| Office spawning scripting hosts | [`splunk/office-child-process.md`](splunk/office-child-process.md) | Splunk (Sysmon) |
-| Suspicious scheduled tasks | [`sentinel-kql/suspicious-scheduled-task.md`](sentinel-kql/suspicious-scheduled-task.md) | Microsoft Sentinel (KQL) |
-| JA4 clustering of distributed web attacks | [`splunk/waf-ja4-hunting.md`](splunk/waf-ja4-hunting.md), [`sentinel-kql/waf-ja4-hunting.md`](sentinel-kql/waf-ja4-hunting.md) | Splunk, Sentinel |
-| JA4 from packet captures and Zeek | [`network/tshark-zeek-ja4.md`](network/tshark-zeek-ja4.md) | tshark, Zeek |
+### CrowdStrike Falcon
+
+| Query set | Covers |
+|---|---|
+| [`crowdstrike-falcon/clickfix-hunting.md`](crowdstrike-falcon/clickfix-hunting.md) | ClickFix (fake CAPTCHA, Win+R paste) |
+| [`crowdstrike-falcon/powershell-download-hunting.md`](crowdstrike-falcon/powershell-download-hunting.md) | PowerShell downloads: file name, hash, source URL, scoping |
+| [`crowdstrike-falcon/credential-access.md`](crowdstrike-falcon/credential-access.md) | LSASS, SAM, NTDS, Kerberoasting |
+| [`crowdstrike-falcon/persistence-hunting.md`](crowdstrike-falcon/persistence-hunting.md) | Scheduled tasks, Run keys, services, WMI |
+| [`crowdstrike-falcon/lateral-movement.md`](crowdstrike-falcon/lateral-movement.md) | PsExec, WMI, WinRM, SMB, RDP |
+| [`crowdstrike-falcon/defense-evasion-and-discovery.md`](crowdstrike-falcon/defense-evasion-and-discovery.md) | Shadow copy deletion, log clearing, tool tampering, recon, LOLBins |
+
+### Splunk
+
+| Query set | Covers |
+|---|---|
+| [`splunk/powershell-hunting.md`](splunk/powershell-hunting.md) | Encoded, hidden and download-cradle PowerShell; script blocks |
+| [`splunk/windows-authentication-hunting.md`](splunk/windows-authentication-hunting.md) | Brute force, spraying, logon types, Kerberoasting, account changes |
+| [`splunk/lateral-movement-and-persistence.md`](splunk/lateral-movement-and-persistence.md) | Services, tasks, WMI, admin shares, Run keys |
+| [`splunk/proxy-and-web-hunting.md`](splunk/proxy-and-web-hunting.md) | Beaconing, new domains, downloads, uploads, user agents |
+| [`splunk/dns-hunting.md`](splunk/dns-hunting.md) | Tunneling, NXDOMAIN bursts, DGA-like names, resolver bypass |
+| [`splunk/tls-fingerprint-hunting.md`](splunk/tls-fingerprint-hunting.md) | JA3 and JA4 stacking, rare clients, pivots, beaconing |
+| [`splunk/office-child-process.md`](splunk/office-child-process.md) | Office spawning scripting hosts (Sysmon) |
+| [`splunk/waf-ja4-hunting.md`](splunk/waf-ja4-hunting.md) | JA4 clustering of distributed web attacks |
+
+### Microsoft Sentinel (KQL)
+
+| Query set | Covers |
+|---|---|
+| [`sentinel-kql/entra-signin-hunting.md`](sentinel-kql/entra-signin-hunting.md) | Spray, MFA fatigue, legacy auth, travel, token replay |
+| [`sentinel-kql/m365-mailbox-and-app-abuse.md`](sentinel-kql/m365-mailbox-and-app-abuse.md) | Inbox rules, forwarding, OAuth consent, role changes |
+| [`sentinel-kql/defender-endpoint-hunting.md`](sentinel-kql/defender-endpoint-hunting.md) | PowerShell, LOLBins, LSASS, persistence, ransomware precursors |
+| [`sentinel-kql/network-and-beaconing-hunting.md`](sentinel-kql/network-and-beaconing-hunting.md) | Beaconing, new destinations, exfiltration, DNS abuse |
+| [`sentinel-kql/azure-activity-hunting.md`](sentinel-kql/azure-activity-hunting.md) | Role assignments, tampering, Key Vault, NSG exposure |
+| [`sentinel-kql/suspicious-scheduled-task.md`](sentinel-kql/suspicious-scheduled-task.md) | Suspicious scheduled tasks |
+| [`sentinel-kql/waf-ja4-hunting.md`](sentinel-kql/waf-ja4-hunting.md) | JA4 clustering of distributed web attacks |
+
+### Network (command line)
+
+| Query set | Covers |
+|---|---|
+| [`network/zeek-hunting.md`](network/zeek-hunting.md) | Zeek conn, dns, http, ssl and files logs |
+| [`network/suricata-eve-hunting.md`](network/suricata-eve-hunting.md) | Suricata EVE JSON with jq |
+| [`network/tshark-hunting-cheatsheet.md`](network/tshark-hunting-cheatsheet.md) | Packet capture triage with tshark |
+| [`network/tshark-zeek-ja4.md`](network/tshark-zeek-ja4.md) | JA4 from captures and Zeek |
 
 ## How each file is laid out
 
