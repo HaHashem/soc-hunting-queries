@@ -51,6 +51,18 @@ A small, growing collection of hunting and detection queries I use as starting p
 | [`network/tshark-hunting-cheatsheet.md`](network/tshark-hunting-cheatsheet.md) | Packet capture triage with tshark |
 | [`network/tshark-zeek-ja4.md`](network/tshark-zeek-ja4.md) | JA4 from captures and Zeek |
 
+### Ransomware
+
+Stage-by-stage hunting, from initial access to exfiltration and recovery inhibition. Start with the [overview](ransomware/README.md).
+
+| Query set | Covers |
+|---|---|
+| [`ransomware/crowdstrike.md`](ransomware/crowdstrike.md) | CrowdStrike Falcon: shadow copy deletion, tool tampering, mass file activity, ransom notes, mass deployment |
+| [`ransomware/microsoft-kql.md`](ransomware/microsoft-kql.md) | Defender advanced hunting and Sentinel (KQL) |
+| [`ransomware/splunk.md`](ransomware/splunk.md) | Splunk with Sysmon and Windows Security logs |
+| [`ransomware/network-firewall-proxy-waf.md`](ransomware/network-firewall-proxy-waf.md) | Firewall, proxy and WAF: entry, C2, internal spread, exfiltration |
+| [`ransomware/identity-backup-and-email.md`](ransomware/identity-backup-and-email.md) | Domain controllers, backup systems and email delivery |
+
 ## How each file is laid out
 
 Every query set follows the same structure so it can be reviewed quickly:
