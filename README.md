@@ -82,6 +82,13 @@ The reasoning behind these queries is written up in my articles:
 - [Hunting distributed attacks with JA4](https://hahashem.github.io/article.html?slug=ja4-fingerprint-hunting)
 - [DFIR case study: phishing to lateral movement](https://hahashem.github.io/article.html?slug=dfir-phishing-to-lateral-movement)
 
+## Related repositories
+
+- [sigma-rules](https://github.com/HaHashem/sigma-rules): the same detections as vendor-neutral Sigma rules. Includes an [ATT&CK coverage map](https://github.com/HaHashem/sigma-rules/blob/main/coverage/COVERAGE.md) that combines the rules with these query sets.
+- [dfir-toolkit](https://github.com/HaHashem/dfir-toolkit): offline command-line tools for IOC extraction, hashing, JA3/JA4 stacking and event log triage.
+- [dfir-cheatsheets](https://github.com/HaHashem/dfir-cheatsheets): Windows artifacts, event IDs, persistence locations, triage checklist, and command references including CrowdStrike RTR.
+- [ioc-checker](https://github.com/HaHashem/ioc-checker): in-browser indicator extraction and multi-platform lookups with no API keys.
+
 ## Contributing and feedback
 
 Found a field that is wrong for your sensor version, or a better filter? Open an issue or pull request with what you changed and why.
